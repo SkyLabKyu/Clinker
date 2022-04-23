@@ -1,7 +1,7 @@
-﻿define kyu = Character("KyuSiik")
-define nerva = Character("[Nerva_name]")
-define varce = Character("[Varce_name]")
-define tsuzu = Character("[Tsuzu_name]")
+﻿define kyu = Character("KyuSiik", color="#B486D9")
+define nerva = Character("[Nerva_name]", color="#86D5D9")
+define varce = Character("[Varce_name]", color="#ACD986")
+define tsuzu = Character("[Tsuzu_name]",  color="#D98A86")
 
 transform laugh:
     linear 0.05 yalign 0.9
