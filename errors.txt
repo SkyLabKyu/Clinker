@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 231: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+        kyu "You deserve to be free, to be happy! It's nobody else's place to 
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Sat Apr 23 19:26:40 2022

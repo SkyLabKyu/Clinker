@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 239, in script
+    if Tsuzuknown:
+  File "game/script.rpy", line 239, in <module>
+    if Tsuzuknown:
+NameError: name 'Tsuzuknown' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 239, in script
+    if Tsuzuknown:
+  File "renpy/ast.py", line 1898, in execute
+    if renpy.python.py_eval(condition):
+  File "renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 239, in <module>
+    if Tsuzuknown:
+NameError: name 'Tsuzuknown' is not defined
+
+Windows-10-10.0.19041
+Ren'Py 7.4.11.2266
+Clinker 1.0
+Sat Apr 23 19:53:45 2022
