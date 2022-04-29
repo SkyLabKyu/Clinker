@@ -3,6 +3,8 @@ define nerva = Character("[Nerva_name]", color="#86D5D9")
 define varce = Character("[Varce_name]", color="#ACD986")
 define tsuzu = Character("[Tsuzu_name]",  color="#D98A86")
 
+define keera = Character("Tlokhenbehra Keera")
+
 transform laugh:
     linear 0.05 yalign 0.9
     linear 0.1 yalign 1.1
@@ -36,7 +38,17 @@ label start:
     #Intro scene, in which Kyu wakes up and meets the rest of the cast
 
     "Before beginning, please note that all dialogue images and sounds are currently placeholders, and are subject to change in future versions."
-    "Hope you enjoy this early build of the game."
+    "Also, this game contains sexual content, so first I need to verify you're of legal age."
+
+    menu:
+        "Are you over the age of 18?"
+
+        "Yes":
+            "Bonza, then you're free to go."
+            "Hope you enjoy this early build of the game."
+
+        "No":
+            jump ending_0
 
     scene bg brig
 
@@ -52,6 +64,7 @@ label start:
     "The floor of the room is covered in a thin layer of hay or straw, presumably for comfort?"
     "Not exactly living it up in here is it?"
     "You try to move."
+    play sound "audio/clink.ogg"
     "*Clink*" with hpunch
     "Your hands are bound behind your back, the cold steel of a pair of manicles digging into your wrists."
     kyu "Shit!"
@@ -89,6 +102,7 @@ label start:
     varce "Sure"
     kyu "Bonza..."
     kyu "Well...Hello everybody! My name is Kyu, it's nice to meet you all. I'd shake your hands but..."
+    play sound "audio/clink.ogg"
     "You shake your chains."
     kyu "Now, unlike the looks of you lot this ain't the first time I've been chained to a wall (even if you don't count the times I did it with consent)"
     kyu "Point is, I reckon I can get us out of here. I just need to know a bit about what's going on."
@@ -265,4 +279,62 @@ label intro_decision_1_skip:
     show tsuzu at left with move
     show nerva annoyed at right with moveinright
     nerva "Yeah! Who actually are you, and why should we trust you to get us out of here?"
+    kyu "I'm a pirate"
+    show tsuzu shocked
+    tsuzu "!?" with hpunch
+    kyu "Yarr~"
+    kyu "Yeah, I'm not what people think of right!"
+    show tsuzu at left with move
+    show nerva shocked at right with moveinright
+    nerva "I mean...I guess that explains why you're locked up anyway!"
+    show varce neutral at center with dissolve
+    varce "And why you think you can get out of here"
+    show varce angry
+    varce "But I assume you'll be leaving us to rot"
+    show tsuzu neutral
+    tsuzu "Yeah, why should we trust you to bring us with you?"
+    kyu "Ahh...it's a sad thing"
+    kyu "We pirates actually have a strict code of honour."
+    kyu "In days gone by I could give you my word and everyone would know that I'm bound by it."
+    kyu "But thesedays you all assume us to be liars, cheats and drunkards!"
+    nerva "Yup!"
+    nerva "What the hell do you expect!? When your livelihood is based off ruining others?"
+    kyu "That's an unfair assessment. We just see it as...redistributing wealth, away from those that horde it devoid of reason and making it available to those who need it more."
+    varce "Oh yeah, I'm sure all those innocent souls at the bottom of the ocean are really glad you 'liberated' their rich masters of their assets?"
+    kyu "Rule 1 of pirate law. Don't attack one who would not attack you first. We make that perfectly clear to any crews we come upon and usually they just let us have our way."
+    kyu "It's a victimless crime really"
+    show tsuzu angry at rage
+    tsuzu "I'm not so sure that's true!"
+    kyu "Okay fair enough, I'll find a way to convince you down the line. But first do you want out of here or not?"
+    tsuzu "Not if you're gonna ditch us!"
+    tsuzu "You dragons are all the fucking same!!"
+    tsuzu "Only think about yourselves!!"
+    show varce angry
+    varce "Hey!!" with hpunch
+    varce "You shut your fucking mouth before I shut you up!!"
+    show nerva at faceright
+    "Nerva curls up again, her ears flattening out"
+    kyu "Guys please! Keep your voices down!"
+    show varce at rage
+    varce "Shut the fuck up!!"
+    show tsuzu at rage
+    tsuzu "Keep out of this you filthy pirate scum!!"
+    play sound "audio/bang.ogg"
+    "Suddenly the chamber floods with light, a tall imposing figure standing at the door, flanked by the stocky shapes of two guards clad in thick plates of armour." with hpunch
+    keera "What's going on in here!?"
+    "Everyone goes silent"
+
+    #Endings
+label ending_placeholder:
+    scene black
+    "The game has now ended"
+    jump terminate
+
+label ending_0:
+    scene black
+    "Ending 0: You are too young to play this game"
+    jump terminate
+
+
+label terminate:
 return

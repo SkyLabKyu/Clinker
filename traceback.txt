@@ -1,28 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 239, in script
-    if Tsuzuknown:
-  File "game/script.rpy", line 239, in <module>
-    if Tsuzuknown:
-NameError: name 'Tsuzuknown' is not defined
+  File "game/script.rpy", line 286, in script
+    show varce neutral at center with Dissolve
+Exception: Expected transition to be a displayable, not a <curry <class 'renpy.display.transition.Dissolve'> () {'new_widget': <Fixed at 5172890>, 'old_widget': <Fixed at 3feb4d0>}>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 239, in script
-    if Tsuzuknown:
-  File "renpy/ast.py", line 1898, in execute
-    if renpy.python.py_eval(condition):
-  File "renpy/python.py", line 2276, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 239, in <module>
-    if Tsuzuknown:
-NameError: name 'Tsuzuknown' is not defined
+  File "game/script.rpy", line 286, in script
+    show varce neutral at center with Dissolve
+  File "renpy/ast.py", line 1443, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "renpy/exports.py", line 1684, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "renpy/display/core.py", line 2762, in do_with
+    clear=clear)
+  File "renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 3679, in interact_core
+    raise Exception("Expected transition to be a displayable, not a %r" % trans)
+Exception: Expected transition to be a displayable, not a <curry <class 'renpy.display.transition.Dissolve'> () {'new_widget': <Fixed at 5172890>, 'old_widget': <Fixed at 3feb4d0>}>
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
-Clinker 1.0
-Sat Apr 23 19:53:45 2022
+Clinker 0.1.2
+Thu Apr 28 11:48:23 2022
