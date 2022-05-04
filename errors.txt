@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 64: expected statement.
-    parallel:
-            ^
-
-File "game/script.rpy", line 68: expected statement.
-    parallel:
-            ^
+File "game/script.rpy", line 95: choice menuitem expects a non-empty block.
+    "I surrendered":
+                    ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun Apr 24 10:45:00 2022
+Wed May  4 21:14:08 2022

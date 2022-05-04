@@ -3,8 +3,6 @@ define nerva = Character("[Nerva_name]", color="#86D5D9")
 define varce = Character("[Varce_name]", color="#ACD986")
 define tsuzu = Character("[Tsuzu_name]",  color="#D98A86")
 
-define keera = Character("Tlokhenbehra Keera")
-
 transform laugh:
     linear 0.05 yalign 0.9
     linear 0.1 yalign 1.1
@@ -50,11 +48,87 @@ label start:
         "No":
             jump ending_0
 
-    scene bg brig
+    play music moonlight
+    scene bg sea1
+    "A growl escapes your throat. A deep rumble of resigned rage."
+    "The guards either side of you visibly leer backwards as your rage bubbles through."
+    "Fighting back would be a bad idea, with your hands bound behind your back. The cruel, barbed points of anti-dragon spikes visible protruding from the barrels of the guards' shotguns."
+    "These bastards came prepared, ready to put you down at a moment's notice."
+    "You take one last look at your faithful ship."
+    "The Black Valiant, true to her name through many battles and rough seas. Even now she seemed to fight against the thick steel chains that dragged her unwillingly behind the smoke-belching warship of your captors."
+    "You're snapped out of your thoughts by the rough questioning of a guard."
+    stop music
+    "Guard" "You listening bitch!? I said confirm your identity!"
+    kyu "{i}Kernig Axeldrana the fucking Fourteenth!{/i}"
+    kyu "There's no need for this, you know wh-{w=0.6}{nw}"
+    "You feel the hard wooden stock of one of the guard's weapons strike you in the jaw" with hpunch
+    "Guard" "Don't play games with us! I heard star-dragons, float but can't swim. I'm sure you don't want me testing that rumour!"
+    "He punctuates his point with a cruel laugh."
+    "Guard" "Now, answer the damn question. You are KyuSiik Greokhwang, the Neon Eviscerator. Please confirm!"
+    "You shoot a glance at the other guard, ready to clobber you in the face again."
+    kyu "Not the first time I've been called either of those names."
+    kyu "Though I resent your insistance on calling me  anything but KyuSiik."
+    "The guard begins scratching some marks into a wax tablet in his hand."
+    "Guard" "The Kaxa'aad thanks you for your cooperation..."
+    "Guard" "Now, with your identity confirmed, we're taking you into custody for the following charges."
+    "Guard" "Piracy{w=1}{nw}"
+    "Guard" "Murder{w=0.8}{nw}"
+    "Guard" "Arson{w=0.6}{nw}"
+    "Guard" "Armed Robbery{w=0.4}{nw}"
+    "Guard" "Looting{w=0.3}{nw}"
+    play music moonlight fadein 0.6
+    "Guard" "Posession of Restricted Substances{w=0.3}{nw}"
+    "Guard" "Distribution of Restricted Substances{w=0.3}{nw}"
+    "Guard" "Intent to Desert a Designated Place of Exile{w=0.3}{nw}"
+    "Guard" "Deserting a Designated Place of Exile{w=0.3}{nw}"
+    "Guard" "Whistling on a Tuesday{w=0.3}{nw}"
+    "Guard" "Desecration of Pizza with Pinapple, Chives and Mayonaise{w=0.3}{nw}"
+    "The list of charges continue, as the small boat rows closer to the lumbering form of the grey and orange ironclad behind you."
+    "Its three forward deck turrets remain trained on the Valiant even now, as though she might autonomously leap back into action and break her chains."
+    "You can't help but grin to yourself. It's almost an honour, needing a fleet of five cutting-edge battleships to finally bring you in."
+    "Still, this was bad."
+    "Sailing one day with absolute freedom toward strange horizons with the cool sea breeze across your wings, bellowing out shanties with friends, a cargo hold full of iced tea and a warm bed full of warm bodies to spend the night with."
+    "Life was so fine, the ocean so vast and it felt like all of it was your playground. But you got complaicent, only to have it ripped away from you overnight, by the engine of opression, the Kaxa'aad."
+    "Their chuffing cast-iron war machines steamed over the horizon in the early hours of the morning. By the time you could make it to the bridge the thundering of cannons was already echoing across the waters from both sides of the engagement."
+    "By sunrise the Valiant was taking on water and the deep bellowing warhorns of the dark grey ships sitting all around her lofting shell, demanded surrender or death."
+    menu:
+        "I surrendered":
+            "Insert surrender scene here"
 
+        "I fought back":
+            "Better to die free, than to live as a slave. Together, you and your crew put up a viscious last stand. With nothing but your trusty revolver, you held off the first few waves."
+            "Six gem-tipped rounds flew true, slicing through the armour of the boarding infantry and leaving a trail of green sparks."
+            play sound "audio/clink.ogg"
+            "You crack open your weapon, fumbling for another six rounds. The scent of gunpowder filling your nostrils as the spent casings scatter loosely at your feet."
+            play sound "audio/bang.ogg"
+            "You hear the crack of rifle fire, instinctually forcing you to your knees behind a barrel of spice. The bulky shape of a Kaxa infantryman barreling toward you. Two more quickly mounting the deck."
+            play sound "audio/bang.ogg"
+            play sound "audio/bang.ogg"
+            "Another rifle crack, followed by another. The soldiers work in pairs, one moving while the other shoots. With your weapon fully loaded you pop up, ready to loose another round into the rapidly appraching intruder when-"
+            play sound "audio/bang.ogg"
+            stop music
+            "A rifle round strikes your shoulder, it glances off your scales but the impact takes the wind clean out of your lungs, knocking off your aim."
+            "In that very same second, the armoured brute slams bodily into you, pinning you to the ground with his full weight."
+            "Seeing their captain taken prisoner, a few crewmen begin to surrender. The rest stood fast, and died fighting for what they beleived in."
+
+    "But for you, the captain of the Valiant, the one they called the Neon Eviscerator. For you, they had a special fate in store."
+
+    "Guard" "For your crimes you will be taken to court martial and sentenced to death by firing squad."
+    "Guard" "Your execution will be public, and will serve as an example to all those that make themselves enemies of Kaxa'aad"
+    "Guard" "Do you understand the rights I've just read to you?"
+    kyu "Heh, \"Rights\"..."
+    "You take another glance at the other guard"
+    kyu "Yeah...yeah I do."
+    scene black
+    "After the long and arduous process of loading you on board, you find yourself being marched toward the brig. By now, the exhaustion and lack of sleep is beginning to catch up with you, filling your head with a grey fog."
+    "Even trying to think of a way out is near impossible, not that it would do much good with the constant threat of a dragon spike through the back of the skull at the slightest misstep."
+    "Your legs practically give out beneath you as they throw you into the cell, and you hear the mechanical clunk of the key turning in the lock behind you."
+
+    scene bg brig
     $ Nerva_name = "???"
     $ Varce_name = "???"
     $ Tsuzu_name = "???"
+
 
     "You wake up in a small room, four steel walls and a low ceiling. The room is almost pitch black, thankfully it happens that your kind can see quite well in the dark."
     "A few slivers of light poke through some rusted holes behind you, as well as through a few cracks around the edges of what appears to be a double door taking up almost the entire wall."
